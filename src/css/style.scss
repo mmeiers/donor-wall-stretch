@@ -1,0 +1,116 @@
+/** COLOR VARIABLES **/
+$white: #ffffff;
+$ltgrey: #E0E0E0;
+$black: #000000;
+$red: #CC0000;
+$blue: #15253E;
+$containerBlue: #002D72;
+$grey: #555555;
+$purple: #405DB2;
+$popupDetailsBlack: #4A4A4A;
+$opacity: rgba(255, 255, 255, 0.2);
+
+/** FONT WEIGHT VARIABLES **/
+$regular: 400;
+$black: 900;
+
+@font-face {
+    font-familiy: franklin;
+    src: url('https://storage.googleapis.com/risemedialibrary-3269f756-a195-46ac-80ff-8e106d6d8615/fonts/franklin.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  overflow: hidden;
+  background-color: $black;
+  font-familiy: 'franklin', sans-serif;
+}
+
+@mixin shadowShallow {
+  box-shadow: 0 1px 3px rgba(0,0,0, 0.15);
+}
+
+@mixin shadowDeep {
+  box-shadow:0 14px 14px rgba(0,0,0,0.4);
+}
+
+@mixin popupShadow {
+  box-shadow: 0 0 6px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.2);
+}
+
+@mixin subMenuText {
+  color: $white;
+  font-size: 30px;
+  text-transform: titlecase;
+  font-weight:400;
+  margin: 0;
+}
+
+/**IMPORT STYLES FROM PARTIALS FILE**/
+@import 'partials';
+
+/**SCROLL BAR SKIN**/
+::-webkit-scrollbar {
+
+  width: 20px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-clip: padding-box;
+  -webkit-border-radius: 10px;
+  background-color: $red;
+
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: $opacity;
+  border-radius: 20px;
+  border: 20px solid transparent;
+  width:3px;
+}
+
+/**MAIN AREAS**/
+#wrapper {
+  font-family: 'franklin', sans-serif;
+  position: absolute;
+  top:0;
+  left:0;
+  width:3840px;
+  height:600px;
+  background-color:black;
+  overflow: hidden;
+}
+.background {
+  opacity: .5;
+  width:3840px;
+}
+
+#area__welcome--intro, #area__donors, #area__history, #area__contact,
+
+.page-show {
+  display:block !important;
+}
+
+.arrow-show {
+  display:block !important;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+
+
+
+

@@ -1,0 +1,85 @@
+
+body {margin:0px 0px; padding:0px;
+font-size:14px; ;font-weight:100;
+overflow:hidden;
+}
+
+#virtualKeyboard {
+    width: 100%;
+    text-align: center;
+}
+
+#keyboard{
+    padding:0px;
+    width:960px;
+    left:400px;
+    height:358px;
+    display:block;
+ }
+
+ #virtualKeyboard #keyboard {
+   position: relative;
+   top:30px;
+   left:90px;
+}
+
+#keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+
+#keyboardHeader {position:relative;}
+#keyboardHeader div {color:#fff; background-color:#7b8490;padding:3px; padding-left:15px; padding-right:15px; position:absolute; cursor:pointer; right:-10px; top:-40px;}
+.closex {font-weight:bolder; color:#000;}
+
+#keyboardCapitalLetter {display:none;}
+#keyboardSmallLetter {display:block;}
+#keyboardNumber {display:none;}
+#keyboardSymbols {display:none;}
+
+#keyboardDonateCapitalLetter {display:none;}
+#keyboardDonateSmallLetter {display:block;}
+#keyboardDonateNumber {display:none;}
+#keyboardDonateSymbols {display:none;}
+#keyboard {
+ .button {
+    width:70px; height:70px;
+    background-color:#fff;
+    position:relative;
+    float:left;
+    margin-right:9px;
+    margin-top:10px;
+    cursor:pointer;
+    font-size:2.2em;
+    @include shadowShallow;
+    background: $white;
+    border-radius: 5px;
+}
+
+.buttonDown {background:none;background-color: r$red; color:$white}
+.button_a {margin-left:44px;}
+.button_dash {margin-left:44px;}
+.button_underscore {margin-left:44px;}
+.button_enter {width:103px; font-size:1.7em; }
+.button_del{width:103px; font-size:1.7em;}
+.button_smallletter{font-size:1.7em; margin-left:20px;}
+.button_capitalletterleft{font-size:1.7em; margin-left:20px;}
+.button_capitalletterright{ width:129px; font-size:1.7em;}
+.button_numberleft{width:172px; font-size:1.7em; margin-left:100px;}
+.button_numberright{width:129px; font-size:1.7em;}
+.button_space {width:376px;}
+.button_symbolsleft{width:172px; font-size:1.7em; margin-left:26px;}
+.button_symbolsright{width:129px; font-size:1.7em;}
+
+
+.key {width:100%; height:100%; text-align:center; padding-top:12px; }
+.key_del {padding-top:18px;}
+.key_enter {padding-top:18px;}
+.key_smallletter {padding-top:18px;}
+.key_capitalletterleft {padding-top:18px;}
+.key_capitalletterright {padding-top:18px;}
+.key_number {padding-top:18px; }
+.key_symbols {padding-top:18px;}
+
+.button:hover {
+  color:white;
+  background-color: $red;
+}
+}

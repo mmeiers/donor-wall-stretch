@@ -1,0 +1,441 @@
+#area__donors {
+	position: relative;
+	margin:0;
+	padding:0;
+
+	#area__donors__featured__content, #area__donors__all__content {
+		width:100%;
+		position:absolute;
+		height:69vh;
+		left:0;
+		top:200px;
+		display:none;
+
+		margin:0;
+	}
+}
+
+#area__donors__featured__content {
+	padding:0 0 0 50px;
+
+	&:before {
+		content:"";
+		position: absolute;
+		left:0;
+		bottom:0;
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%);
+		width:100%;
+		height:250px;
+		z-index:1;
+	}
+
+	#area__donors__featured__scrolling {
+		height:660px;
+		overflow:hidden;
+		padding-bottom:80px;
+		margin-right:50px;
+		position: relative;
+
+		ul {
+			display:flex;
+			flex-wrap:wrap;
+			list-style:none;
+			margin: 0;
+			padding: 0;
+			width:1700px;
+
+			li {
+				width:510px;
+				min-height:488px;
+				background:$white;
+				border-radius:20px;
+				margin-left:50px;
+				margin-bottom:50px;
+				padding:20px;
+				text-align:center;
+			}
+
+			.image-container {
+				display:flex;
+				width:100%;
+				height:380px;
+				overflow:hidden;
+				flex-direction:column;
+				align-items:center;
+
+				img {
+					width:100%;
+					height:auto;
+					margin:auto;
+					align-self:center;
+				}
+			}
+
+			p {
+				color:$red;
+				font-size:36px;
+			}
+		}
+	}
+}
+
+#area__donors__all__content {
+		padding:0 100px;
+
+		&:before {
+			content:"";
+			position: absolute;
+			left:0;
+			bottom:0;
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0.01) 0%,rgba(0,0,0,1) 80%);
+			width:100%;
+			height:200px;
+			z-index:1;
+		}
+
+
+	#area__donors__all__scrolling {
+		height:480px;
+		overflow:hidden;
+		padding-bottom:80px;
+		position: relative;
+
+
+		ul {
+			list-style:none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display:flex;
+				font-weight:200;
+				font-size:36px;
+				color:$white;
+				padding:16px 0;
+
+				p {
+					width:774px;
+					margin:0;
+				}
+
+				.level {
+					width:900px;
+					margin:0;
+				}
+			}
+		}
+	}
+
+	.area__donors__all__headers {
+		list-style:none;
+		margin: 0 0 20px 0;
+		padding: 0;
+		display:flex;
+
+			li {
+				font-size:36px;
+				font-weight:$black;
+				color:$purple;
+			}
+
+			li:first-of-type {
+				margin-right:674px;
+			}
+
+	}
+}
+
+//Donor popup view
+.area__donors__popup {
+	position: absolute;
+	top:-40px;
+	left:-40px;
+	right:-40px;
+	bottom:-40px;
+	background-color:rgba(black,0.8);
+	z-index:99999 !important;
+	display:none;
+
+	.area__donors__popup--card {
+		position: absolute;
+		top:120px;
+		left:105px;
+		width:1710px;
+		height:860px;
+		padding:40px 60px 60px 60px;
+		border-radius:20px;
+		background:$white;
+		z-index:99999;
+		@include popupShadow;
+
+
+		.button--close {
+			position: absolute;
+			right:-60px;
+			top:-60px;
+		}
+
+		h2.area__donors__popup__title {
+			width:100%;
+			font-size:100px;
+			line-height:100px !important;
+			padding: 0 !important;
+			color:$blue !important;
+			position: relative;
+			margin-bottom:30px;
+		}
+
+		.area__donors__popup__content {
+			width:100%;
+
+			.area__donors__popup__text {
+				width:70%;
+				float:left;
+				position: relative;
+				margin-top:30px;
+				padding-top:20px;
+
+				&:after {
+					content:"";
+					position:absolute;
+					left:0;
+					top:-20px;
+					width:200px;
+					height:5px;
+					background:$red;
+				}
+
+
+				.level {
+					font-size:48px;
+					color:$purple;
+					margin: 0 0 10px 0;
+				}
+
+				.bio {
+					font-size:48px;
+					color:$purple;
+					margin: 0;
+				}
+
+				#area__donors__popup__scrolling {
+					overflow:hidden;
+					height:425px;
+					margin-right:40px;
+					padding-right:40px;
+
+						.area__donors__popup__details {
+							font-size:30px;
+							font-weight:200;
+							color:$popupDetailsBlack;
+						}
+				}
+			}
+
+			.area__donors__popup__image {
+				width:30%;
+				float:left;
+				margin-top:50px;
+
+				.area__donors__popup__image__container {
+					display:flex;
+					width:490px;
+					height:360px;
+					border-radius:20px;
+					overflow:hidden;
+					flex-direction:column;
+					align-items:center;
+
+						img {
+							width:100%;
+							height:auto;
+							margin:auto;
+							align-self:center;
+						}
+				}
+			}
+		}
+	}
+}
+
+//Donor search popup
+
+.area__donors__popup__search {
+	position: absolute;
+	top:-40px;
+	left:-40px;
+	right:-40px;
+	bottom:-40px;
+	background-color:rgba(black,0.8);
+	z-index:99 !important;
+	display:none;
+
+	.area__donors__popup__search__card {
+		width:1060px;
+		height:810px;
+		background:$containerBlue;
+		border-radius:20px;
+		margin:160px auto auto;
+		position: relative;
+
+		.button--close {
+			position: absolute;
+			right:-60px;
+			top:-60px;
+		}
+
+		.header {
+			width:100%;
+			background:$containerBlue;
+			padding:20px;
+			text-align:center;
+
+			input {
+				width:880px;
+				border-radius:8px;
+				line-height:77px;
+				background-image:url("../images/search-icon.png");
+				background-repeat:no-repeat;
+				background-position: 20px center;
+				padding-left:80px;
+				font-size:36px;
+				box-shadow:inset 0 1px 3px rgba(black,0.3), 0 8px 8px rgba(black, 0.2);
+			}
+
+			input:focus {
+				outline:none;
+			}
+		}
+		.results {
+			width:100%;
+			height:290px;
+			overflow:hidden;
+			background:$white;
+
+			ul {
+				list-style:none;
+				margin: 0;
+				padding: 5px 90px 20px 90px;
+
+				li {
+					font-weight:200;
+					font-size:36px;
+					color:$grey;
+					padding:8px 0;
+				}
+			}
+		}
+		.area__donors__search__keyboard {
+
+			#vitualKeyboard {
+				position: relative;
+				top:200 !important;
+			}
+		}
+
+	}
+	.touch--cta--search {
+		width:500px;
+	  height:100px;
+	  position: absolute;
+	  top:980px;
+	  left:710px;
+	  display: flex;
+	  align-items:center;
+	  justify-content:center;
+	  @include subMenuText;
+	  color:$white;
+	  z-index:9999;
+
+	  i {
+	    font-size:40px;
+	    margin-right:5px;
+	    position: relative;
+	    top:-10px;
+	  }
+
+	  p {
+	    position: relative;
+	    top:-6px;
+
+	  }
+	}
+}
+
+//Donor navigation menu
+.area__donors__navigation {
+	width:477px;
+	position: absolute;
+	left:200px;
+	bottom:0px;
+	z-index:10;
+
+	ul {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+
+		li {
+			font-size:30px;
+			color:$white;
+			font-weight:$regular;
+			margin-bottom:20px;
+			position: relative;
+		}
+
+		.featured--donors {
+			&:before {
+				content:"";
+				position: absolute;
+				left:-40px;
+				top:0;
+				width:30px;
+				height:30px;
+				background-image:url("../images/star.png");
+				background-size:100%;
+				background-position:center 2px;
+				background-repeat:no-repeat;
+			}
+		}
+
+		.all {
+			&:before {
+				content:"";
+				position: absolute;
+				left:-40px;
+				top:0;
+				width:30px;
+				height:30px;
+				background-image:url("../images/person.png");
+				background-size:100%;
+				background-position:center 2px;
+				background-repeat:no-repeat;
+			}
+		}
+
+		.donor__nav__selected {
+			&:after {
+				content:"";
+				position: absolute;
+				left:-80px;
+				top:0;
+				width:30px;
+				height:30px;
+				background-image:url("../images/selection-arrow.png");
+				background-size:50%;
+				background-position:center 6px;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+	.button--search {
+		position: absolute;
+		right:80px;
+		top:-15px;
+
+	}
+}
+
+.donor-view-visible {
+	display:block !important;
+}

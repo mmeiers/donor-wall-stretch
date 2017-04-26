@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thomas Jefferson</title>
+
+    <!-- Google Sheet Dependencies -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="bower_components/rise-google-sheet/rise-google-sheet.html">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="build/css/style.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+
+   <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+  <div id="wrapper">
+
+  <!-- Global Background and Audio Files -->
+  <!--<audio id="soundclip" preload="auto">
+    <source src="build/audio/sword.mp3"></source>
+  </audio>-->
+  <img class="background" src="build/images/background.png">
+
+
+  <!--Idle Page-->
+  <div class="page--main page-show" data-page="0" id="area__welcome--intro">
+
+    <div class="area__welcome--intro">
+
+    <rise-google-sheet
+      id="googleSheetFloaters1"
+      key="1UwldANv4eCnVT6xTRXlS_wLYmg1uSdCWf_10ObZ8jeY"
+      apikey="AIzaSyD8KxU6Eva4mg0n7fptsJc9KLsTuXHIcSU"
+      sheet="Donors"
+      range="A1:B50"
+      refresh="1">
+    </rise-google-sheet>
+    <rise-google-sheet
+      id="googleSheetFloaters2"
+      key="1UwldANv4eCnVT6xTRXlS_wLYmg1uSdCWf_10ObZ8jeY"
+      apikey="AIzaSyD8KxU6Eva4mg0n7fptsJc9KLsTuXHIcSU"
+      sheet="Donors"
+      range="A51:B100"
+      refresh="1">
+    </rise-google-sheet>
+    <rise-google-sheet
+      id="googleSheetFloaters3"
+      key="1UwldANv4eCnVT6xTRXlS_wLYmg1uSdCWf_10ObZ8jeY"
+      apikey="AIzaSyD8KxU6Eva4mg0n7fptsJc9KLsTuXHIcSU"
+      sheet="Donors"
+      range="A101:B150"
+      refresh="1">
+    </rise-google-sheet>
+      <!-- Idle Screen Floating Donors -->
+      <div class="container--floaters1">
+        <!-- append idle floaters -->
+      </div>
+
+      <div class="container--floaters2">
+        <!-- append idle floaters -->
+      </div>
+
+      <div class="container--floaters3">
+        <!-- append idle floaters -->
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+    <div class="gradient-container"></div>
+
+  </div><!--.wrapper-->
+
+
+
+
+
+  <script src="src/scripts/donor-search-keyboard.js"></script>
+
+  <!-- autoscroll dependencies -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/utils/Draggable.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
+
+  <!-- Club GreenSock Members Only Plugin, subject to its own license: http://greensock.com/club/ -->
+  <script src="https://s3.amazonaws.com/rise-common/scripts/greensock/1.18.0/ThrowPropsPlugin.min.js"></script>
+
+  <!--jquery panzoom-->
+  <script src="jquery.panzoom.min.js"></script>
+
+
+  <!-- main js-->
+  <script src="build/scripts/all.min.js"></script>
+
+</body>
+</html>

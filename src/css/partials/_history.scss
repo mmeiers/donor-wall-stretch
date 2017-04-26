@@ -1,0 +1,104 @@
+.area__history__content--partnership {
+	width:95%;
+	display:none;
+	position: relative;
+	top:-40px;
+	padding-left:100px;
+}
+
+.area__history__content--tjhsst {
+	width:95%;
+	display:none;
+	position: relative;
+	top:-40px;
+	padding-left:100px;
+}
+
+.subheader--history {
+	font-size:48px;
+	color:$white;
+	margin: 30px 0 0 0;
+}
+
+.area__history__scrollable {
+	height:480px;
+	overflow:hidden;
+}
+
+.area__history__scrollable p {
+	font-size:30px;
+	color:$white;
+}
+
+
+//History navigation menu
+.area__history__navigation {
+	width:477px;
+	position: absolute;
+	left:200px;
+	bottom:0px;
+	z-index:10;
+
+	ul {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+
+		li {
+			font-size:30px;
+			color:$white;
+			font-weight:$regular;
+			margin-bottom:20px;
+			position: relative;
+		}
+
+		.partnership {
+			&:before {
+				content:"";
+				position: absolute;
+				left:-40px;
+				top:0;
+				width:30px;
+				height:30px;
+				background-image:url("../images/star.png");
+				background-size:100%;
+				background-position:center 2px;
+				background-repeat:no-repeat;
+			}
+		}
+
+		.tjhsst {
+			&:before {
+				content:"";
+				position: absolute;
+				left:-40px;
+				top:0;
+				width:30px;
+				height:30px;
+				background-image:url("../images/person.png");
+				background-size:100%;
+				background-position:center 2px;
+				background-repeat:no-repeat;
+			}
+		}
+
+		.history__nav__selected {
+			&:after {
+				content:"";
+				position: absolute;
+				left:-80px;
+				top:0;
+				width:30px;
+				height:30px;
+				background-image:url("../images/selection-arrow.png");
+				background-size:50%;
+				background-position:center 6px;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+.history-view-visible {
+	display:block !important;
+}
